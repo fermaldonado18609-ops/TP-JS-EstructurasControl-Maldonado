@@ -32,7 +32,7 @@ if (isNaN(distanciaKm) || isNaN(tiempoMinutos) || distanciaKm <= 0 || tiempoMinu
         let costoTotal = subtotalBase * multiplicadorDemanda;
 
         if (distanciaKm > 20) {
-            costoTotal += 1500; // Recargo fijo de peaje
+            costoTotal += 1500; 
         }
 
         alert(`Tarifa Estimada del Viaje: $${costoTotal.toLocaleString('es-AR', { minimumFractionDigits: 2 })} ARS`);
