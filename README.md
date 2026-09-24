@@ -12,16 +12,16 @@ Repositorio correspondiente al Trabajo Práctico de **Entrada de Datos y Estruct
 
 ```text
 TP-JS-EstructurasControl-[Maldonado]/
-├── index.html          # Dashboard interactivo para ejecución de scripts
-├── README.md           # Documentación general del proyecto
+├── index.html         
+├── README.md          
 └── js/
-    ├── ejercicio01.js  # Control de Acceso y Gestión de Permisos por Rol
-    ├── ejercicio02.js  # Cotizador Dinámico de Pólizas de Seguro Automotor
-    ├── ejercicio03.js  # Calculadora de Liquidación de Sueldos con Impuestos
-    ├── ejercicio04.js  # Tarificador Dinámico de Plataforma de Transporte
-    ├── ejercicio05.js  # Evaluador de Categoría Tributaria (Monotributo)
-    ├── ejercicio06.js  # Scoring Crediticio para Pre-Aprobación de Créditos
-    ├── ejercicio07.js  # Cajero Automático Multiopción
-    ├── ejercicio08.js  # Motor de Descuentos en Comercio Electrónico
-    ├── ejercicio09.js  # Sistema de Triaje para Urgencias Médicas
-    └── ejercicio10.js  # Conversor Monetario con Ajuste por Inflación
+    ├── ejercicio01.js 
+    ├── ejercicio02.js  
+    ├── ejercicio03.js  
+    ├── ejercicio04.js  
+    ├── ejercicio05.js  
+    ├── ejercicio06.js  
+    ├── ejercicio07.js  
+    ├── ejercicio08.js  
+    ├── ejercicio09.js  
+    └── ejercicio10.js  
