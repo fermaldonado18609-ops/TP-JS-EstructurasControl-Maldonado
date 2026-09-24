@@ -10,17 +10,16 @@ if (isNaN(ingresoMensual) || isNaN(antiguedad) || isNaN(montoSolicitado) || ingr
     let aprobado = true;
     let motivoRechazo = "";
 
-    // Evaluación 1: Historial de deudas
     if (tieneDeudas === "si") {
         aprobado = false;
         motivoRechazo = "Posee deudas pendientes registradas.";
     }
-    // Evaluación 2: Antigüedad laboral
+    
     else if (antiguedad < 1) {
         aprobado = false;
         motivoRechazo = "La antigüedad laboral es menor al mínimo requerido (1 año).";
     } 
-    // Evaluación 3: Capacidad de pago (Relación cuota/ingreso)
+   
     else {
         const montoConInteres = montoSolicitado * 1.30;
         const cuotaMensual = montoConInteres / 12;
