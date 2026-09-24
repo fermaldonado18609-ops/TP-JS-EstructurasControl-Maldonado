@@ -11,7 +11,7 @@ Repositorio correspondiente al Trabajo Práctico de **Entrada de Datos y Estruct
 ## 📁 Estructura del Repositorio
 
 ```text
-TP-JS-EstructurasControl-[Apellido]/
+TP-JS-EstructurasControl-[Maldonado]/
 ├── index.html          # Dashboard interactivo para ejecución de scripts
 ├── README.md           # Documentación general del proyecto
 └── js/
