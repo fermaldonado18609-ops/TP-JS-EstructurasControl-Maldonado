@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP JavaScript - Estructuras de Control</title>
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-color: #f8fafc;
+            --accent-color: #38bdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #38bdf8, #818cf8, #c084fc);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-num {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #e2e8f0;
+        }
+
+        .btn-run {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: filter 0.2s ease, transform 0.1s ease;
+        }
+
+        .btn-run:hover {
+            filter: brightness(1.15);
+        }
+
+        .btn-run:active {
+            transform: scale(0.98);
+        }
+
+        /* Colores temáticos por ejercicio */
+        .card:nth-child(1) .card-num { color: #f43f5e; }
+        .card:nth-child(1) .btn-run { background: linear-gradient(90deg, #f43f5e, #e11d48); }
+
+        .card:nth-child(2) .card-num { color: #fb923c; }
+        .card:nth-child(2) .btn-run { background: linear-gradient(90deg, #fb923c, #ea580c); }
+
+        .card:nth-child(3) .card-num { color: #facc15; }
+        .card:nth-child(3) .btn-run { background: linear-gradient(90deg, #eab308, #ca8a04); }
+
+        .card:nth-child(4) .card-num { color: #4ade80; }
+        .card:nth-child(4) .btn-run { background: linear-gradient(90deg, #22c55e, #16a34a); }
+
+        .card:nth-child(5) .card-num { color: #2dd4bf; }
+        .card:nth-child(5) .btn-run { background: linear-gradient(90deg, #14b8a6, #0d9488); }
+
+        .card:nth-child(6) .card-num { color: #38bdf8; }
+        .card:nth-child(6) .btn-run { background: linear-gradient(90deg, #0ea5e9, #0284c7); }
+
+        .card:nth-child(7) .card-num { color: #60a5fa; }
+        .card:nth-child(7) .btn-run { background: linear-gradient(90deg, #3b82f6, #2563eb); }
+
+        .card:nth-child(8) .card-num { color: #818cf8; }
+        .card:nth-child(8) .btn-run { background: linear-gradient(90deg, #6366f1, #4f46e5); }
+
+        .card:nth-child(9) .card-num { color: #a78bfa; }
+        .card:nth-child(9) .btn-run { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
+
+        .card:nth-child(10) .card-num { color: #f472b6; }
+        .card:nth-child(10) .btn-run { background: linear-gradient(90deg, #ec4899, #db2777); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>TP: Entrada de Datos en JavaScript</h1>
+            <p>Estructuras de Control y Lógica Condicional</p>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 01</div>
+                    <div class="card-title">Control de Acceso y Permisos</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio01.js')">Ejecutar</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 02</div>
+                    <div class="card-title">Cotizador de Seguro Automotor</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio02.js')">Ejecutar</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 03</div>
+                    <div class="card-title">Liquidación de Sueldos</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio03.js')">Ejecutar</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 04</div>
+                    <div class="card-title">Tarificador de Transporte</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio04.js')">Ejecutar</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 05</div>
+                    <div class="card-title">Evaluador de Monotributo</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio05.js')">Ejecutar</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 06</div>
+                    <div class="card-title">Scoring Crediticio</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio06.js')">Ejecutar</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 07</div>
+                    <div class="card-title">Cajero Automático Multiopción</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio07.js')">Ejecutar</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 08</div>
+                    <div class="card-title">Motor de Descuentos E-Commerce</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio08.js')">Ejecutar</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 09</div>
+                    <div class="card-title">Triaje de Urgencias Médicas</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio09.js')">Ejecutar</button>
+            </div>
+
+            <div class="card">
+                <div>
+                    <div class="card-num">Ejercicio 10</div>
+                    <div class="card-title">Conversor Monetario e Inflación</div>
+                </div>
+                <button class="btn-run" onclick="ejecutarScript('js/ejercicio10.js')">Ejecutar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function ejecutarScript(ruta) {
+            const antiguoScript = document.getElementById('script-dinamico');
+            if (antiguoScript) {
+                antiguoScript.remove();
+            }
+            const script = document.createElement('script');
+            script.src = ruta;
+            script.id = 'script-dinamico';
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+</html>
