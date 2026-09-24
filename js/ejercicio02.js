@@ -29,13 +29,13 @@ if (isNaN(edad) || isNaN(accidentes) || edad <= 0 || accidentes < 0) {
         let recargosYDescuentos = 0;
 
         if (edad < 25) {
-            recargosYDescuentos += 0.20; // 20% recargo por edad
+            recargosYDescuentos += 0.20; 
         }
         if (accidentes === 0) {
-            recargosYDescuentos -= 0.10; // 10% bonificación
+            recargosYDescuentos -= 0.10; 
         }
         if (accidentes >= 3) {
-            recargosYDescuentos += 0.30; // 30% recargo por siniestralidad
+            recargosYDescuentos += 0.30; 
         }
 
         const tarifaFinal = tarifaBase * (1 + recargosYDescuentos);
