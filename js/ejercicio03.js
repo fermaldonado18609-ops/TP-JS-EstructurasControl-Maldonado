@@ -3,7 +3,7 @@ const sueldoBruto = parseFloat(prompt("Ingrese el Sueldo Bruto del trabajador (A
 if (isNaN(sueldoBruto) || sueldoBruto <= 0) {
     console.log("Error: Ingrese un sueldo bruto válido mayor a 0.");
 } else {
-    // Retenciones fijas
+
     const jubilacion = sueldoBruto * 0.11;
     const obraSocial = sueldoBruto * 0.03;
     const ley19032 = sueldoBruto * 0.03;
@@ -11,7 +11,6 @@ if (isNaN(sueldoBruto) || sueldoBruto <= 0) {
 
     const sueldoNetoProvisorio = sueldoBruto - totalRetencionesFijas;
 
-    // Cálculo de Impuesto a las Ganancias
     let retencionGanancias = 0;
 
     if (sueldoNetoProvisorio > 2000000) {
