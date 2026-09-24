@@ -24,11 +24,10 @@ if (isNaN(montoARS) || isNaN(mesesProyeccion) || montoARS <= 0 || mesesProyeccio
     }
 
     if (cotizacion > 0) {
-        // Comisión por cambio del 2%
         const montoConComision = montoARS * 0.98;
         const montoDivisaRecibido = montoConComision / cotizacion;
 
-        // Proyección por inflación acumulada simple del 4% mensual
+        
         const montoProyectadoARS = montoARS * (1 + (0.04 * mesesProyeccion));
 
         console.log("=========================================");
